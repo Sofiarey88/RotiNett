@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:RotiNet.ViewModels"
+             x:Class="RotiNet.View.Pedidos.AddEditPedidoView"
+             Title="Agregar/Editar Pedido">
+
+    <ContentPage.BindingContext>
+        <viewmodels:AddEditPedidoViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout Padding="20" Spacing="30" BackgroundColor="#2C3E50">
+        <!-- Title -->
+        <Label Text="Agregar/Editar Pedido"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="White" />
+
+        <!-- Form Fields -->
+        <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="*,*">
+            <!-- Fecha Field -->
+            <Label Text="Fecha:" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="End" TextColor="White"/>
+            <DatePicker Date="{Binding Pedido.Fecha}" Grid.Row="0" Grid.Column="1" BackgroundColor="Black" />
+
+            <!-- Cliente Field -->
+            <Label Text="Nombre del cliente:" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="End" TextColor="White"/>
+            <Picker SelectedItem="{Binding Cliente}" Grid.Row="1" Grid.Column="1" ItemsSource="{Binding Clientes}" ItemDisplayBinding="{Binding Nombre}" BackgroundColor="Black" />
+
+            <!-- Producto Field -->
+            <Label Text="Nombre del producto:" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="End" TextColor="White"/>
+            <Picker SelectedItem="{Binding Producto}" Grid.Row="2" Grid.Column="1" ItemsSource="{Binding Productos}" ItemDisplayBinding="{Binding Nombre}" BackgroundColor="Black" />
+
+            <!-- Precio Field -->
+            <Label Text="Precio:" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="End" TextColor="White"/>
+            <Entry Text="{Binding Producto.Precio}" Grid.Row="3" Grid.Column="1" Placeholder="Ingrese el precio del producto" BackgroundColor="Black" TextColor="Black" HeightRequest="50"  />
+        </Grid>
+
+        <!-- Action Buttons -->
+        <HorizontalStackLayout Spacing="30" HorizontalOptions="Center">
+            <Button Text="Guardar"
+                    Command="{Binding GuardarCommand}"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    WidthRequest="150"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    Padding="10"/>
+            <Button Text="Cancelar"
+                    Command="{Binding CancelarCommand}"
+                    BackgroundColor="#FF5722"
+                    TextColor="White"
+                    WidthRequest="150"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    Padding="10"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

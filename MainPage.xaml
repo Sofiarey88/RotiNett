@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RotiNet"
+             x:Class="RotiNet.MainPage">
+
+    <!-- Título Principal -->
+    <ScrollView>
+        <VerticalStackLayout Padding="30,20" Spacing="20">
+            <Image Source="roti.jpg" WidthRequest="150" HeightRequest="150" HorizontalOptions="Center" />
+
+            <!-- Título principal -->
+            <Label Text="¡Bienvenido a RotiNet!"
+        FontSize="28" 
+        FontAttributes="Bold" 
+        HorizontalOptions="Center" 
+        TextColor="White" />
+
+
+            <!-- Tarjetas de navegación opcionales (Acciones Rápidas) -->
+            <Frame BorderColor="#ccc" CornerRadius="10" Padding="20" Margin="0,20">
+                <StackLayout>
+                    <Label Text="Acciones Rápidas"
+                           FontSize="22" 
+                           FontAttributes="Bold" 
+                           HorizontalOptions="Center" 
+                           TextColor="White" />
+                    <Button Text="Ver Pedidos Recientes"
+                            BackgroundColor="#4CAF50" TextColor="White"
+                            Clicked="BtnVentas_Clicked"
+                            HorizontalOptions="Fill" HeightRequest="50" CornerRadius="10" />
+                    <Button Text="Nuevo Pedido"
+                            BackgroundColor="#FF5722" TextColor="White"
+                            Clicked="BtnVentas_Clicked"
+                            HorizontalOptions="Fill" HeightRequest="50" CornerRadius="10" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Imagen de bienvenida -->
+
+           
+
+            <!-- Descripción breve -->
+            <Label Text="Gestiona tus pedidos, clientes y productos de forma sencilla."
+                   FontSize="16"
+                   HorizontalOptions="Center" 
+                   TextColor="Yellow" />
+
+            <!-- Botones grandes, visuales y modernos -->
+            <Button Text="Clientes"
+                    BackgroundColor="#4CAF50" TextColor="White"
+                    Clicked="BtnClientes_Clicked"
+                    HorizontalOptions="Fill" HeightRequest="70" CornerRadius="15" />
+
+            <Button Text="Proveedores"
+                    BackgroundColor="#FF5722" TextColor="White"
+                    Clicked="BtnProveedores_Clicked"
+                    HorizontalOptions="Fill" HeightRequest="70" CornerRadius="15" />
+
+            <Button Text="Productos"
+                    BackgroundColor="#2196F3" TextColor="White"
+                    Clicked="BtnProductos_Clicked"
+                    HorizontalOptions="Fill" HeightRequest="70" CornerRadius="15" />
+
+            <Button Text="Pedidos"
+                    BackgroundColor="#9C27B0" TextColor="White"
+                    Clicked="BtnVentas_Clicked"
+                    HorizontalOptions="Fill" HeightRequest="70" CornerRadius="15" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
