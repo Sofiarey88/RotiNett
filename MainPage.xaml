@@ -26,13 +26,10 @@
                            HorizontalOptions="Center" 
                            TextColor="White" />
                     <Button Text="Ver Pedidos Recientes"
-                            BackgroundColor="#4CAF50" TextColor="White"
+                            BackgroundColor="Pink" TextColor="Black"
                             Clicked="BtnVentas_Clicked"
                             HorizontalOptions="Fill" HeightRequest="50" CornerRadius="10" />
-                    <Button Text="Nuevo Pedido"
-                            BackgroundColor="#FF5722" TextColor="White"
-                            Clicked="BtnVentas_Clicked"
-                            HorizontalOptions="Fill" HeightRequest="50" CornerRadius="10" />
+                   
                 </StackLayout>
             </Frame>
 

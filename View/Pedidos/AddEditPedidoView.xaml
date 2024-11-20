@@ -33,7 +33,7 @@
 
             <!-- Precio Field -->
             <Label Text="Precio:" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="End" TextColor="White"/>
-            <Entry Text="{Binding Producto.Precio}" Grid.Row="3" Grid.Column="1" Placeholder="Ingrese el precio del producto" BackgroundColor="Black" TextColor="Black" HeightRequest="50"  />
+            <Entry Text="{Binding Producto.Precio}" Grid.Row="3" Grid.Column="1" Placeholder="Ingrese el precio del producto" BackgroundColor="Black" TextColor="White" HeightRequest="50"  />
         </Grid>
 
         <!-- Action Buttons -->
