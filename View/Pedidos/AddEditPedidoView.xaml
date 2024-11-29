@@ -19,7 +19,9 @@
 
         <!-- Form Fields -->
         <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="*,*">
-           
+
+
+          
             <!-- Cliente Field -->
             <Label Text="Nombre del cliente:" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="End" TextColor="White"/>
             <Picker SelectedItem="{Binding Cliente}" Grid.Row="1" Grid.Column="1" ItemsSource="{Binding Clientes}" ItemDisplayBinding="{Binding Nombre}" BackgroundColor="Black" />
@@ -28,6 +30,9 @@
             <Label Text="Nombre del producto:" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="End" TextColor="White"/>
             <Picker SelectedItem="{Binding Producto}" Grid.Row="2" Grid.Column="1" ItemsSource="{Binding Productos}" ItemDisplayBinding="{Binding Nombre}" BackgroundColor="Black" />
 
+            <Label Text="Estado del pedido:" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="End" TextColor="White"/>
+            <Entry Text="{Binding Pedido.Estado}" Grid.Row="4" Grid.Column="1" 
+        Placeholder="Ingrese el estado" BackgroundColor="Black" TextColor="White"/>
             <!-- Precio Field -->
             <Label Text="Precio:" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="End" TextColor="White"/>
             <Entry Text="{Binding Producto.Precio, StringFormat='${0:F2}'}" Grid.Row="3" Grid.Column="1" Placeholder="Ingrese el precio del producto" BackgroundColor="Black" TextColor="White" HeightRequest="50" Keyboard="Numeric"/>

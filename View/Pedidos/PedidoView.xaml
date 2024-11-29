@@ -38,8 +38,11 @@
 
                             <!-- Contenido del pedido -->
                             <VerticalStackLayout Spacing="10">
+
                                 <Label Text="{Binding Cliente.Nombre}" FontSize="Small" TextColor="White" />
                                 <Label Text="{Binding Producto.Nombre}" FontSize="Small" TextColor="White" />
+                                <Label Text="{Binding Pedido.Estado}" FontSize="Small" TextColor="White" />
+
                                 <Label Text="{Binding Producto.Precio, StringFormat='${0:F2}'}" FontSize="Small" TextColor="White" />
                             </VerticalStackLayout>
                         </StackLayout>
