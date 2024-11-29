@@ -60,7 +60,9 @@ namespace RotiNet.ViewModels
         public ObservableCollection<Cliente> Clientes
         {
             get { return clientes; }
-            set { clientes = value;
+            set
+            {
+                clientes = value;
                 OnPropertyChanged();
             }
         }
@@ -75,8 +77,8 @@ namespace RotiNet.ViewModels
                 OnPropertyChanged();
             }
         }
-            
-            
+
+
 
 
         // Constructor para creación de nuevo pedido
@@ -136,7 +138,7 @@ namespace RotiNet.ViewModels
                     //    // Cargar los datos del producto asociado al pedido
                     //    Producto = await productoService.GetByIdAsync(Pedido.ProductoId);
                     //}
-                    if(Pedido == null)
+                    if (Pedido == null)
                     {
                         Console.WriteLine($"No se encontró el pedido con Id {pedidoId}");
                     }

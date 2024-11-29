@@ -19,10 +19,7 @@
 
         <!-- Form Fields -->
         <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="*,*">
-            <!-- Fecha Field -->
-            <Label Text="Fecha:" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="End" TextColor="White"/>
-            <DatePicker Date="{Binding Pedido.Fecha}" Grid.Row="0" Grid.Column="1" BackgroundColor="Black" />
-
+           
             <!-- Cliente Field -->
             <Label Text="Nombre del cliente:" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="End" TextColor="White"/>
             <Picker SelectedItem="{Binding Cliente}" Grid.Row="1" Grid.Column="1" ItemsSource="{Binding Clientes}" ItemDisplayBinding="{Binding Nombre}" BackgroundColor="Black" />
@@ -33,7 +30,7 @@
 
             <!-- Precio Field -->
             <Label Text="Precio:" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="End" TextColor="White"/>
-            <Entry Text="{Binding Producto.Precio}" Grid.Row="3" Grid.Column="1" Placeholder="Ingrese el precio del producto" BackgroundColor="Black" TextColor="White" HeightRequest="50"  />
+            <Entry Text="{Binding Producto.Precio, StringFormat='${0:F2}'}" Grid.Row="3" Grid.Column="1" Placeholder="Ingrese el precio del producto" BackgroundColor="Black" TextColor="White" HeightRequest="50" Keyboard="Numeric"/>
         </Grid>
 
         <!-- Action Buttons -->
